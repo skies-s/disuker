@@ -1,0 +1,14 @@
+const { keyInSelect } = require('readline-sync');
+const tools = new Map();
+tools.set('Get token information.', require('./tools/get-me'));
+tools.set('Close all DMs.', require('./tools/delete-channels'));
+tools.set('Unfriend all friends.', require('./tools/delete-relationships'));
+tools.set('Leave all servers.', require('./tools/delete-guilds'));
+tools.set('Mass create servers.', require('./tools/post-guilds'));
+tools.set('Loop themes & locale.', require('./tools/patch-settings'));
+tools.set('Interactive (custom selection).', require('./tools/interactive'));
+const keys = [...tools.keys()];
+const values = [...tools.values()];
+const index = keyInSelect(keys, 'Which tool would you like to execute?');
+const tool = values[index];
+tool();
