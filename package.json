@@ -1,0 +1,23 @@
+{
+  "name": "disuker",
+  "version": "1.0.0",
+  "description": "Discord account nuker.",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/test.js"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "ascii-table": "^0.0.9",
+    "lodash": "^4.17.21",
+    "readline-sync": "^1.4.10"
+  },
+  "engines": {
+    "node": "12.x"
+  },
+  "repository": {
+    "url": "https://github.com/Raja9080/disuker"
+  },
+  "license": "MIT",
+  "keywords": []
+}
