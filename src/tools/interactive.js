@@ -13,5 +13,5 @@ module.exports = async () => {
   if (leaveGuilds) tools.push(require('./delete-guilds'));
   const loop = keyInYN('Do you want to loop themes & locale?');
   if (loop) tools.push(require('./patch-settings'));
-  tools.forEach(tool => tool());
+  tools.forEach(tool => tool(token));
 };
