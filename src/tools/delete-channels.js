@@ -13,7 +13,7 @@ module.exports = async token => {
     if (err.response.status === 401) return console.log(INVALID_TOKEN);
   }
   for (const c of d) {
-    const [u] = c.recipients;
+    const [u = {}] = c.recipients;
     await api(token).delete(`/channels/${c.id}`);
     console.log(`Closed DM: ${u.username}`);
   }
